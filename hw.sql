@@ -110,3 +110,8 @@ HAVING COUNT(rating)>50
 ORDER BY AVG(rating) DESC LIMIT 1;
 
 //question 8
+SELECT  AVG(rating), ratings.movie_id
+FROM ratings
+GROUP BY movie_id
+HAVING AVG(rating)>4
+ORDER BY movie_id;
